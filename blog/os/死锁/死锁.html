@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>死锁 | LIANYONGXING.</title>
+    <meta name="description" content="May the force be with u.">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.a5323663.css" as="style"><link rel="preload" href="/assets/js/app.8d94790d.js" as="script"><link rel="preload" href="/assets/js/2.d064818f.js" as="script"><link rel="preload" href="/assets/js/79.4fe8e13c.js" as="script"><link rel="prefetch" href="/assets/js/10.708a063c.js"><link rel="prefetch" href="/assets/js/11.97587d6f.js"><link rel="prefetch" href="/assets/js/12.a1038e5a.js"><link rel="prefetch" href="/assets/js/13.452cec6b.js"><link rel="prefetch" href="/assets/js/14.1b1f9013.js"><link rel="prefetch" href="/assets/js/15.e77d7eb2.js"><link rel="prefetch" href="/assets/js/16.a24cf8ab.js"><link rel="prefetch" href="/assets/js/17.b5335472.js"><link rel="prefetch" href="/assets/js/18.1a1bafa9.js"><link rel="prefetch" href="/assets/js/19.4488c0c9.js"><link rel="prefetch" href="/assets/js/20.03fcbba6.js"><link rel="prefetch" href="/assets/js/21.419c2a93.js"><link rel="prefetch" href="/assets/js/22.2105c3a2.js"><link rel="prefetch" href="/assets/js/23.ee9f111d.js"><link rel="prefetch" href="/assets/js/24.1fe16f76.js"><link rel="prefetch" href="/assets/js/25.e192cbde.js"><link rel="prefetch" href="/assets/js/26.b87c496e.js"><link rel="prefetch" href="/assets/js/27.5535febd.js"><link rel="prefetch" href="/assets/js/28.09ce4efb.js"><link rel="prefetch" href="/assets/js/29.9270a44b.js"><link rel="prefetch" href="/assets/js/3.e274a401.js"><link rel="prefetch" href="/assets/js/30.28bd083e.js"><link rel="prefetch" href="/assets/js/31.67119ded.js"><link rel="prefetch" href="/assets/js/32.ac8fccbf.js"><link rel="prefetch" href="/assets/js/33.aa03f22b.js"><link rel="prefetch" href="/assets/js/34.2560e9db.js"><link rel="prefetch" href="/assets/js/35.85b696d3.js"><link rel="prefetch" href="/assets/js/36.277de40a.js"><link rel="prefetch" href="/assets/js/37.9eaeb9dd.js"><link rel="prefetch" href="/assets/js/38.b445fa5b.js"><link rel="prefetch" href="/assets/js/39.317916c6.js"><link rel="prefetch" href="/assets/js/4.eb7c92fa.js"><link rel="prefetch" href="/assets/js/40.7e386ade.js"><link rel="prefetch" href="/assets/js/41.44b55ca3.js"><link rel="prefetch" href="/assets/js/42.44e0f769.js"><link rel="prefetch" href="/assets/js/43.04b90f2e.js"><link rel="prefetch" href="/assets/js/44.91dcd731.js"><link rel="prefetch" href="/assets/js/45.49abff58.js"><link rel="prefetch" href="/assets/js/46.ed96366d.js"><link rel="prefetch" href="/assets/js/47.d3cd479b.js"><link rel="prefetch" href="/assets/js/48.85d77887.js"><link rel="prefetch" href="/assets/js/49.a41544ee.js"><link rel="prefetch" href="/assets/js/5.ccbb454e.js"><link rel="prefetch" href="/assets/js/50.fd21fb92.js"><link rel="prefetch" href="/assets/js/51.5935c3d0.js"><link rel="prefetch" href="/assets/js/52.ff1b62d6.js"><link rel="prefetch" href="/assets/js/53.5f38cbdf.js"><link rel="prefetch" href="/assets/js/54.41279aa8.js"><link rel="prefetch" href="/assets/js/55.0b5c29a8.js"><link rel="prefetch" href="/assets/js/56.0955bd7f.js"><link rel="prefetch" href="/assets/js/57.ecfc4ab2.js"><link rel="prefetch" href="/assets/js/58.7546293a.js"><link rel="prefetch" href="/assets/js/59.d4ca583d.js"><link rel="prefetch" href="/assets/js/6.6a51f3ec.js"><link rel="prefetch" href="/assets/js/60.f9dc2d09.js"><link rel="prefetch" href="/assets/js/61.1f9cf93e.js"><link rel="prefetch" href="/assets/js/62.018f902a.js"><link rel="prefetch" href="/assets/js/63.1f5e8e1f.js"><link rel="prefetch" href="/assets/js/64.c4ec78c3.js"><link rel="prefetch" href="/assets/js/65.648f71f3.js"><link rel="prefetch" href="/assets/js/66.8b457f03.js"><link rel="prefetch" href="/assets/js/67.d38d183a.js"><link rel="prefetch" href="/assets/js/68.9a8f9f51.js"><link rel="prefetch" href="/assets/js/69.75386d70.js"><link rel="prefetch" href="/assets/js/7.5a20e931.js"><link rel="prefetch" href="/assets/js/70.b1f427ac.js"><link rel="prefetch" href="/assets/js/71.aefcd19d.js"><link rel="prefetch" href="/assets/js/72.45f8751b.js"><link rel="prefetch" href="/assets/js/73.a7a144ef.js"><link rel="prefetch" href="/assets/js/74.53da628e.js"><link rel="prefetch" href="/assets/js/75.178fcaf4.js"><link rel="prefetch" href="/assets/js/76.08ddaf5d.js"><link rel="prefetch" href="/assets/js/77.1f2f46b0.js"><link rel="prefetch" href="/assets/js/78.3b850723.js"><link rel="prefetch" href="/assets/js/8.7bb1756f.js"><link rel="prefetch" href="/assets/js/80.79e5f144.js"><link rel="prefetch" href="/assets/js/81.fb2abab3.js"><link rel="prefetch" href="/assets/js/82.9c1dc95c.js"><link rel="prefetch" href="/assets/js/83.cb936ffb.js"><link rel="prefetch" href="/assets/js/84.438988e1.js"><link rel="prefetch" href="/assets/js/85.f2c2a9cc.js"><link rel="prefetch" href="/assets/js/86.34db5ef6.js"><link rel="prefetch" href="/assets/js/87.629c7b7d.js"><link rel="prefetch" href="/assets/js/9.14030234.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a5323663.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">LIANYONGXING.</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Blog" class="dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/distributedSystem/" class="nav-link">
+  Distributed System
+</a></li><li class="dropdown-item"><!----> <a href="/blog/machineLearning/" class="nav-link">
+  MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/blog/recommenderSystem/" class="nav-link">
+  RecommenderSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ObjectDetection/" class="nav-link">
+  ObjectDetection
+</a></li><li class="dropdown-item"><!----> <a href="/blog/NLP/" class="nav-link">
+  NLP
+</a></li><li class="dropdown-item"><!----> <a href="/blog/os/" class="nav-link router-link-active">
+  OperatorSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cookies/" class="nav-link">
+  Cookies
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lianyongxing" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Blog" class="dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/distributedSystem/" class="nav-link">
+  Distributed System
+</a></li><li class="dropdown-item"><!----> <a href="/blog/machineLearning/" class="nav-link">
+  MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/blog/recommenderSystem/" class="nav-link">
+  RecommenderSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ObjectDetection/" class="nav-link">
+  ObjectDetection
+</a></li><li class="dropdown-item"><!----> <a href="/blog/NLP/" class="nav-link">
+  NLP
+</a></li><li class="dropdown-item"><!----> <a href="/blog/os/" class="nav-link router-link-active">
+  OperatorSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cookies/" class="nav-link">
+  Cookies
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lianyongxing" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/os/" class="sidebar-link">概述</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>分时操作系统</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统的逻辑结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>操作系统用户界面</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>死锁</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/os/死锁/死锁.html" class="active sidebar-link">死锁</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/os/死锁/死锁.html#死锁的必要条件" class="sidebar-link">死锁的必要条件</a></li><li class="sidebar-sub-header"><a href="/blog/os/死锁/死锁.html#解决死锁的策略" class="sidebar-link">解决死锁的策略</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>进程调度</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理之一</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理之二</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>内存管理之三</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设备管理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>文件管理</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="死锁"><a href="#死锁" class="header-anchor">#</a> 死锁</h1> <h2 id="死锁的必要条件"><a href="#死锁的必要条件" class="header-anchor">#</a> 死锁的必要条件</h2> <ul><li>互斥条件：进程间互相使用资源，资源具有独占性，在一段时间内，资源仅为一个进程占有</li> <li>不可剥夺条件：进程访问完资源前不能被其他进程强行剥夺</li> <li>部分分配条件：申请新资源时，不释放已占有的资源</li> <li>环路条件：多个进程构成环路</li></ul> <h2 id="解决死锁的策略"><a href="#解决死锁的策略" class="header-anchor">#</a> 解决死锁的策略</h2> <ul><li>预防死锁</li></ul> <ol><li>破坏互斥条件（难）：资源固有排他性</li> <li>破坏不剥夺条件（代价高）：会造成系统及其不稳定</li> <li>破坏部分分配条件（预先静态分配算法）</li> <li>破坏环路条件（有序资源分配算法）</li></ol> <ul><li><p>避免死锁<br>
+不事先采取限制去破坏产生死锁的条件，而是在资源分配中，用某种方法去评估，如果分配资源是否会让系统陷入死锁，如果是，则拒绝分配资源，从而避免死锁发生（银行家算法）</p></li> <li><p>检测和恢复死锁<br>
+允许死锁发生，但可以通过检测机制及时检测出死锁状态，并精确确定与死锁有关的进程和资源，然后采取适当措施，将系统中已发生的死锁清除，将进程从死锁中解放出来</p></li></ul> <h3 id="预先静态分配法"><a href="#预先静态分配法" class="header-anchor">#</a> 预先静态分配法</h3> <p>一个进程只有等到所有资源都备齐后才开始执行</p> <h3 id="有序资源分配法"><a href="#有序资源分配法" class="header-anchor">#</a> 有序资源分配法</h3> <p>给系统中的每个资源都分配一个序号，进程每次申请资源的时候只能申请序号更大的资源</p> <p>例如：进程A和进程B，使用资源的顺序分别是R1，R2和R2，R1，如果采用有序资源分配法，则进程A和进程B申请资源的顺序均为R1、R2</p> <h3 id="windows和linux都不处理死锁，留给用户去处理！！"><a href="#windows和linux都不处理死锁，留给用户去处理！！" class="header-anchor">#</a> Windows和Linux都不处理死锁，留给用户去处理！！</h3></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/os/操作系统用户界面/操作系统用户界面.html" class="prev">
+        操作系统用户界面
+      </a></span> <span class="next"><a href="/blog/os/进程调度/进程调度.html">
+        进程调度
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8d94790d.js" defer></script><script src="/assets/js/2.d064818f.js" defer></script><script src="/assets/js/79.4fe8e13c.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DockerFile | LIANYONGXING.</title>
+    <meta name="description" content="May the force be with u.">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.a5323663.css" as="style"><link rel="preload" href="/assets/js/app.8d94790d.js" as="script"><link rel="preload" href="/assets/js/2.d064818f.js" as="script"><link rel="preload" href="/assets/js/56.0955bd7f.js" as="script"><link rel="prefetch" href="/assets/js/10.708a063c.js"><link rel="prefetch" href="/assets/js/11.97587d6f.js"><link rel="prefetch" href="/assets/js/12.a1038e5a.js"><link rel="prefetch" href="/assets/js/13.452cec6b.js"><link rel="prefetch" href="/assets/js/14.1b1f9013.js"><link rel="prefetch" href="/assets/js/15.e77d7eb2.js"><link rel="prefetch" href="/assets/js/16.a24cf8ab.js"><link rel="prefetch" href="/assets/js/17.b5335472.js"><link rel="prefetch" href="/assets/js/18.1a1bafa9.js"><link rel="prefetch" href="/assets/js/19.4488c0c9.js"><link rel="prefetch" href="/assets/js/20.03fcbba6.js"><link rel="prefetch" href="/assets/js/21.419c2a93.js"><link rel="prefetch" href="/assets/js/22.2105c3a2.js"><link rel="prefetch" href="/assets/js/23.ee9f111d.js"><link rel="prefetch" href="/assets/js/24.1fe16f76.js"><link rel="prefetch" href="/assets/js/25.e192cbde.js"><link rel="prefetch" href="/assets/js/26.b87c496e.js"><link rel="prefetch" href="/assets/js/27.5535febd.js"><link rel="prefetch" href="/assets/js/28.09ce4efb.js"><link rel="prefetch" href="/assets/js/29.9270a44b.js"><link rel="prefetch" href="/assets/js/3.e274a401.js"><link rel="prefetch" href="/assets/js/30.28bd083e.js"><link rel="prefetch" href="/assets/js/31.67119ded.js"><link rel="prefetch" href="/assets/js/32.ac8fccbf.js"><link rel="prefetch" href="/assets/js/33.aa03f22b.js"><link rel="prefetch" href="/assets/js/34.2560e9db.js"><link rel="prefetch" href="/assets/js/35.85b696d3.js"><link rel="prefetch" href="/assets/js/36.277de40a.js"><link rel="prefetch" href="/assets/js/37.9eaeb9dd.js"><link rel="prefetch" href="/assets/js/38.b445fa5b.js"><link rel="prefetch" href="/assets/js/39.317916c6.js"><link rel="prefetch" href="/assets/js/4.eb7c92fa.js"><link rel="prefetch" href="/assets/js/40.7e386ade.js"><link rel="prefetch" href="/assets/js/41.44b55ca3.js"><link rel="prefetch" href="/assets/js/42.44e0f769.js"><link rel="prefetch" href="/assets/js/43.04b90f2e.js"><link rel="prefetch" href="/assets/js/44.91dcd731.js"><link rel="prefetch" href="/assets/js/45.49abff58.js"><link rel="prefetch" href="/assets/js/46.ed96366d.js"><link rel="prefetch" href="/assets/js/47.d3cd479b.js"><link rel="prefetch" href="/assets/js/48.85d77887.js"><link rel="prefetch" href="/assets/js/49.a41544ee.js"><link rel="prefetch" href="/assets/js/5.ccbb454e.js"><link rel="prefetch" href="/assets/js/50.fd21fb92.js"><link rel="prefetch" href="/assets/js/51.5935c3d0.js"><link rel="prefetch" href="/assets/js/52.ff1b62d6.js"><link rel="prefetch" href="/assets/js/53.5f38cbdf.js"><link rel="prefetch" href="/assets/js/54.41279aa8.js"><link rel="prefetch" href="/assets/js/55.0b5c29a8.js"><link rel="prefetch" href="/assets/js/57.ecfc4ab2.js"><link rel="prefetch" href="/assets/js/58.7546293a.js"><link rel="prefetch" href="/assets/js/59.d4ca583d.js"><link rel="prefetch" href="/assets/js/6.6a51f3ec.js"><link rel="prefetch" href="/assets/js/60.f9dc2d09.js"><link rel="prefetch" href="/assets/js/61.1f9cf93e.js"><link rel="prefetch" href="/assets/js/62.018f902a.js"><link rel="prefetch" href="/assets/js/63.1f5e8e1f.js"><link rel="prefetch" href="/assets/js/64.c4ec78c3.js"><link rel="prefetch" href="/assets/js/65.648f71f3.js"><link rel="prefetch" href="/assets/js/66.8b457f03.js"><link rel="prefetch" href="/assets/js/67.d38d183a.js"><link rel="prefetch" href="/assets/js/68.9a8f9f51.js"><link rel="prefetch" href="/assets/js/69.75386d70.js"><link rel="prefetch" href="/assets/js/7.5a20e931.js"><link rel="prefetch" href="/assets/js/70.b1f427ac.js"><link rel="prefetch" href="/assets/js/71.aefcd19d.js"><link rel="prefetch" href="/assets/js/72.45f8751b.js"><link rel="prefetch" href="/assets/js/73.a7a144ef.js"><link rel="prefetch" href="/assets/js/74.53da628e.js"><link rel="prefetch" href="/assets/js/75.178fcaf4.js"><link rel="prefetch" href="/assets/js/76.08ddaf5d.js"><link rel="prefetch" href="/assets/js/77.1f2f46b0.js"><link rel="prefetch" href="/assets/js/78.3b850723.js"><link rel="prefetch" href="/assets/js/79.4fe8e13c.js"><link rel="prefetch" href="/assets/js/8.7bb1756f.js"><link rel="prefetch" href="/assets/js/80.79e5f144.js"><link rel="prefetch" href="/assets/js/81.fb2abab3.js"><link rel="prefetch" href="/assets/js/82.9c1dc95c.js"><link rel="prefetch" href="/assets/js/83.cb936ffb.js"><link rel="prefetch" href="/assets/js/84.438988e1.js"><link rel="prefetch" href="/assets/js/85.f2c2a9cc.js"><link rel="prefetch" href="/assets/js/86.34db5ef6.js"><link rel="prefetch" href="/assets/js/87.629c7b7d.js"><link rel="prefetch" href="/assets/js/9.14030234.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a5323663.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">LIANYONGXING.</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Blog" class="dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/distributedSystem/" class="nav-link">
+  Distributed System
+</a></li><li class="dropdown-item"><!----> <a href="/blog/machineLearning/" class="nav-link">
+  MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/blog/recommenderSystem/" class="nav-link">
+  RecommenderSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ObjectDetection/" class="nav-link">
+  ObjectDetection
+</a></li><li class="dropdown-item"><!----> <a href="/blog/NLP/" class="nav-link">
+  NLP
+</a></li><li class="dropdown-item"><!----> <a href="/blog/os/" class="nav-link">
+  OperatorSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cookies/" class="nav-link router-link-active">
+  Cookies
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lianyongxing" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Blog" class="dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/distributedSystem/" class="nav-link">
+  Distributed System
+</a></li><li class="dropdown-item"><!----> <a href="/blog/machineLearning/" class="nav-link">
+  MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/blog/recommenderSystem/" class="nav-link">
+  RecommenderSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ObjectDetection/" class="nav-link">
+  ObjectDetection
+</a></li><li class="dropdown-item"><!----> <a href="/blog/NLP/" class="nav-link">
+  NLP
+</a></li><li class="dropdown-item"><!----> <a href="/blog/os/" class="nav-link">
+  OperatorSystem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/cookies/" class="nav-link router-link-active">
+  Cookies
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lianyongxing" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/cookies/" class="sidebar-link">概述</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基于RTMP协议的流媒体视频直播</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Prometheus+Grafana+Mongodb数据可视化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/cookies/docker/Docker.html" class="sidebar-link">Docker</a></li><li><a href="/blog/cookies/docker/Docker安装.html" class="sidebar-link">Docker安装</a></li><li><a href="/blog/cookies/docker/DockerFile.html" class="active sidebar-link">DockerFile</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/cookies/docker/DockerFile.html#是什么" class="sidebar-link">是什么</a></li><li class="sidebar-sub-header"><a href="/blog/cookies/docker/DockerFile.html#保留字" class="sidebar-link">保留字</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>搭建MongoDb分片集群</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Pycharm远程调试</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2019研究生数学建模B题</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python日志模块Logging</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>新一代低延时网络传输协议QUIC</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dockerfile"><a href="#dockerfile" class="header-anchor">#</a> DockerFile</h1> <h2 id="是什么"><a href="#是什么" class="header-anchor">#</a> 是什么</h2> <p>是用来构建docker镜像的构建文件，是由一系列命令和参数构成的脚本</p> <p>dockerFile中每条指令都会创建一个新的镜像层，并对镜像进行提交</p> <ul><li>构建三步骤
+<ol><li>编写dockerfile</li> <li>docker build</li> <li>docker run</li></ol></li></ul> <h3 id="dockerfile示例"><a href="#dockerfile示例" class="header-anchor">#</a> DockerFile示例</h3> <p>下面是centos的dockerFile的代码：</p> <div class="language- extra-class"><pre class="language-text"><code>FROM scratch    # 真正的基础镜像，类似于java中的Object
+MAINTAINER The CentOS Project &lt;cloud-ops@centos.org&gt;    # 作者+邮箱
+ADD c68-docker.tar.xz /
+LABEL name=&quot;CentOS Base Image&quot; \
+    vendor=&quot;CentOS&quot; \
+    license=&quot;GPLv2&quot; \
+    build-date=&quot;2016-06-02&quot;
+
+# 一个说明
+# Default command
+CMD [&quot;/bin/bash&quot;]   #启动的时候的运行命令
+</code></pre></div><h2 id="保留字"><a href="#保留字" class="header-anchor">#</a> 保留字</h2> <ul><li>From：基础镜像，当前编写的镜像是基于哪个镜像的</li> <li>MAINTAINER：作者+作者的邮箱</li> <li>RUN：容器构建时需要运行的命令</li> <li>EXPOSE：暴露端口</li> <li>WORKDIR：默认登陆的工作目录</li> <li>ENV：在构建镜像过程中设置环境变量</li> <li>ADD：将宿主机目录下的文件拷贝进镜像，并自解压</li> <li>COPY：拷贝文件，COPY src dest或者COPY [&quot;src&quot;,&quot;dest&quot;]</li> <li>VOLUME：保存数据和持久化，建立容器卷</li> <li>CMD：指定一个容器启动时要运行的命令，dockerFIle中可以有多个cmd指令，但只有最后一个生效，CMD会被docker run之后的参数替换</li> <li>ENTRYPOINT：指定一个容器启动时要运行的命令，ENTRYPOINT和CMD一样，都是在指定容器启动程序和参数</li> <li>ONBUILD：当构建一个被继承的dockfile时运行命令，父镜像在被子继承后父镜像的onbuild被触发</li></ul> <table><thead><tr><th>BUILD</th> <th>BOTH</th> <th>RUN</th></tr></thead> <tbody><tr><td>FROM</td> <td>WORKDIR</td> <td>CMD</td></tr> <tr><td>MAINTAINER</td> <td>USER</td> <td>ENV</td></tr> <tr><td>COPY</td> <td></td> <td>EXPOSE</td></tr> <tr><td>ADD</td> <td></td> <td>VOLUME</td></tr> <tr><td>RUN</td> <td></td> <td>ENTRYPOINT</td></tr> <tr><td>ONBUILD</td> <td></td> <td></td></tr> <tr><td>.dockerignore</td> <td></td> <td></td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/cookies/docker/Docker安装.html" class="prev">
+        Docker安装
+      </a></span> <span class="next"><a href="/blog/cookies/搭建Mongodb分片集群/搭建Mongodb分片集群.html">
+        Mongodb分片
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8d94790d.js" defer></script><script src="/assets/js/2.d064818f.js" defer></script><script src="/assets/js/56.0955bd7f.js" defer></script>
+  </body>
+</html>
